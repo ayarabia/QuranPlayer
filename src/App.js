@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.scss";
+import { Container } from "react-bootstrap";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
+import ArabicSearch from "./pages/arabic-search";
+import EnglishSearch from "./pages/english-search";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container dir="rtl">
+      {/* <Home></Home> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="ARsearch" element={<ArabicSearch />} />
+        <Route path="ENsearch" element={<EnglishSearch />} />
+      </Routes>
+    </Container>
   );
 }
-
 export default App;

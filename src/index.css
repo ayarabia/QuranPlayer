@@ -5,9 +5,35 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("../src/imags/bg4.png");
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.shadow{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px  10px 5px ;
+  transition: all .3s ease;
+}
+.shadow:hover{
+  background-color: gray;
+  color: white;
+}
+.gradient{
+  background: #485563;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+input:focus{
+  outline: none;
+}
+.circle{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color:rgb(194, 190, 190);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
